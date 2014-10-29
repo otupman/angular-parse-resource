@@ -1,5 +1,5 @@
 (function(angular, Parse) { 'use strict';
-
+  console.log('angular-parse-resource - starting up');
   angular.module('angular-parse-resource', []);
 
   angular
@@ -9,8 +9,10 @@
         , isInitialised = false;
 
       this.setConfig = function(opts) {
+        console.log('parseResourceProvider - config set', opts);
         config.appId = opts.appId;
         config.appKey = opts.appKey;
+        return config;
       };
 
       this.initialise = function() {
@@ -18,6 +20,9 @@
           return true;
         }
         console.log('parseResourceProvider - initialising');
+        if(!config.appId) {
+          throw new Error('No parse.com config specified');
+        }
         Parse.initialize(config.appId, config.appKey);
         isInitialised = true;
       };
