@@ -1,0 +1,26 @@
+{
+  "name": "angular-parse-resource",
+  "version": "0.0.1",
+  "authors": [
+    "Oliver Tupman <oliver@dts-workshop.com>"
+  ],
+  "description": "Get $resource-like semantics but use parse.com like a boss",
+  "keywords": [
+    "angularjs",
+    "parse.com",
+    "$resource"
+  ],
+  "license": "MIT",
+  "main": "dist/angular-parse-resource.min.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "1.3",
+    "parse-js-sdk": "~1.3.0"
+  }
+}
